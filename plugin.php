@@ -41,3 +41,4 @@
  add_action('init', __NAMESPACE__ . '\Plugin::perInit', 0);
  add_action('init', __NAMESPACE__ . '\Plugin::init', 20);
 //add_action('admin_init', __NAMESPACE__ . '\Admin::init');
+

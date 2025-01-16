@@ -1,27 +1,93 @@
 {
-	"apiVersion": 2,
-	"name": "devaqsa-gutenberg-blocks/test",
-	"version": "0.1.0",
-	"title": "test Block",
-	"category": "devaqsa-gutenberg-blocks",
-	"icon": "calendar-alt",
-	"description": "Example block written with ESNext standard and JSX support build step required.",
-	"supports": {
-		"html": false,
-		"anchor": true
-	},
-	"attributes": {
-		"content": {
-			"type": "string",
-			"default": "Hello World!"
-		},
-		"color": {
-			"type": "string",
-			"default": "#00ff00"
-		}
-	},
-	"textdomain": "devaqsa-gutenberg-blocks",
-	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+    "apiVersion": 2,
+    "name": "devaqsa-gutenberg-blocks/test",
+    "version": "0.1.0",
+    "title": "test Block",
+    "category": "devaqsa-gutenberg-blocks",
+    "icon": "calendar-alt",
+    "description": "Example block written with ESNext standard and JSX support build step required.",
+    "supports": {
+        "html": false,
+        "anchor": true
+    },
+    "attributes": {
+        "content": {
+            "type": "string",
+            "default": "Hello World!"
+        },
+        "color": {
+            "type": "string",
+            "default": "#00ff00"
+        },
+        "textAlignment": {
+            "type": "string",
+            "default": "left"
+        },
+        "fontSize": {
+            "type": "string",
+            "default": "16px"
+        },
+        "backgroundColor": {
+            "type": "string"
+        },
+        "padding": {
+            "type": "number",
+            "default": 0
+        },
+        "fontFamily": {
+            "type": "string",
+            "default": "inherit"
+        },
+        "borderWidth": {
+            "type": "string",
+            "default": "0px"
+        },
+        "borderStyle": {
+            "type": "string",
+            "default": "solid"
+        },
+        "borderColor": {
+            "type": "string"
+        },
+        "borderRadius": {
+            "type": "string",
+            "default": "0px"
+        },
+        "marginTop": {
+            "type": "string",
+            "default": "0px"
+        },
+        "marginBottom": {
+            "type": "string",
+            "default": "0px"
+        },
+        "textTransform": {
+            "type": "string",
+            "default": "none"
+        },
+        "letterSpacing": {
+            "type": "string",
+            "default": "normal"
+        },
+        "lineHeight": {
+            "type": "string",
+            "default": "normal"
+        },
+        "fontWeight": {
+            "type": "string",
+            "default": "normal"
+        },
+        "boxShadow": {
+            "type": "boolean",
+            "default": false
+        },
+        "customClasses": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "textdomain": "devaqsa-gutenberg-blocks",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
 }
