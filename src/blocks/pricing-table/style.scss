@@ -1,0 +1,186 @@
+// style.scss - Frontend styles
+.wp-block-devaqsa-gutenberg-blocks-pricing-table {
+    .pricing-table {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(350px, 1fr));
+        gap: 2rem;
+        padding: 1.5rem;
+        max-width: 1600px;
+        margin: 0 auto;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            max-width: 550px;
+        }
+    }
+
+    .pricing-plan {
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        transition: all 0.3s ease;
+        min-height: 450px;
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        &.highlighted {
+            border: 2px solid #4CAF50;
+            position: relative;
+            transform: scale(1.02);
+            
+            &:before {
+                content: "Popular Choice";
+                position: absolute;
+                top: -12px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #4CAF50;
+                color: white;
+                padding: 4px 16px;
+                border-radius: 20px;
+                font-size: 0.875rem;
+                font-weight: 500;
+            }
+
+            &:hover {
+                transform: scale(1.02) translateY(-3px);
+            }
+        }
+    }
+
+    .plan-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #eef0f5;
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 1rem;
+            color: #1a1f36;
+        }
+
+        .plan-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1a1f36;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            
+            .currency {
+                font-size: 1.75rem;
+                vertical-align: super;
+                margin-right: 2px;
+            }
+
+            .period {
+                font-size: 1rem;
+                color: #6b7280;
+                margin-left: 4px;
+            }
+        }
+    }
+
+    .plan-features {
+        margin: 1.5rem 0;
+        flex-grow: 1;
+        
+        .feature-item {
+            padding: 0.75rem 0;
+            text-align: center;
+            color: #4a5568;
+            font-size: 1rem;
+            border-bottom: 1px solid #eef0f5;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .plan-footer {
+        text-align: center;
+        margin-top: auto;
+        padding-top: 1.5rem;
+        
+        .wp-block-button__link {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 600;
+            box-sizing: border-box;
+
+            &:hover {
+                background-color: darken(#4CAF50, 8%);
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+// editor.scss - Editor-specific styles
+.editor-styles-wrapper {
+    .wp-block-devaqsa-gutenberg-blocks-pricing-table {
+        .pricing-table {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 1.5rem;
+
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            padding: 0.5rem;
+
+            .components-text-control__input {
+                width: 100%;
+                padding: 6px 10px;
+                border-radius: 4px;
+            }
+
+            button {
+                padding: 4px 8px;
+                min-width: auto;
+                border-radius: 4px;
+            }
+        }
+
+        .plan-features {
+            button.is-primary {
+                width: 100%;
+                justify-content: center;
+                margin-top: 1rem;
+                padding: 0.75rem;
+                border-radius: 4px;
+            }
+        }
+    }
+}

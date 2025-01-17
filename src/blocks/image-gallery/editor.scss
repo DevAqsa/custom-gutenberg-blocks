@@ -1,0 +1,16 @@
+.wp-block-gallery-block {
+    // Editor-specific styles
+    .gallery-controls {
+        margin-bottom: 1rem;
+    }
+
+    .placeholder-content {
+        text-align: center;
+        color: #757575;
+    }
+
+    &.is-dragging {
+        background-color: rgba(0, 0, 0, 0.05);
+        border: 2px dashed #007cba;
+    }
+}

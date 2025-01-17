@@ -1,0 +1,55 @@
+{
+    "apiVersion": 2,
+    "name": "devaqsa-gutenberg-blocks/pricing-table",
+    "version": "0.1.0",
+    "title": "Pricing Table",
+    "category": "devaqsa-gutenberg-blocks",
+    "icon": "money-alt",
+    "description": "Add a customizable pricing table with multiple tiers.",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "plans": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Basic",
+                    "price": "9.99",
+                    "period": "month",
+                    "currency": "$",
+                    "features": ["Feature 1", "Feature 2", "Feature 3"],
+                    "buttonText": "Get Started",
+                    "buttonUrl": "",
+                    "highlighted": false
+                },
+                {
+                    "name": "Professional",
+                    "price": "19.99",
+                    "period": "month",
+                    "currency": "$",
+                    "features": ["Feature 1", "Feature 2", "Feature 3", "Feature 4"],
+                    "buttonText": "Get Started",
+                    "buttonUrl": "",
+                    "highlighted": true
+                },
+                {
+                    "name": "Enterprise",
+                    "price": "29.99",
+                    "period": "month",
+                    "currency": "$",
+                    "features": ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
+                    "buttonText": "Get Started",
+                    "buttonUrl": "",
+                    "highlighted": false
+                }
+            ]
+        }
+    },
+    "textdomain": "devaqsa-gutenberg-blocks",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

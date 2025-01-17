@@ -1,0 +1,73 @@
+{
+    "apiVersion": 2,
+    "name": "devaqsa-blocks/image-gallery",
+    "version": "0.1.0",
+    "title": "Advanced Image Gallery",
+    "category": "devaqsa-gutenberg-blocks",
+    "icon": "format-gallery",
+    "description": "Create a responsive image gallery with lightbox support",
+    "supports": {
+        "html": false,
+        "anchor": true,
+        "align": true
+    },
+    "attributes": {
+        "images": {
+            "type": "array",
+            "default": []
+        },
+        "columns": {
+            "type": "number",
+            "default": 3
+        },
+        "cropType": {
+            "type": "string",
+            "default": "square"
+        },
+        "lightboxEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "imageBorderRadius": {
+            "type": "number",
+            "default": 4
+        },
+        "imageSpacing": {
+            "type": "number",
+            "default": 16
+        },
+        "shadowEnabled": {
+            "type": "boolean",
+            "default": true
+        },
+        "shadowIntensity": {
+            "type": "number",
+            "default": 2
+        },
+        "hoverEffect": {
+            "type": "string",
+            "default": "lift"
+        },
+        "captionStyle": {
+            "type": "string",
+            "default": "overlay"
+        },
+        "captionPosition": {
+            "type": "string",
+            "default": "bottom"
+        },
+        "overlayColor": {
+            "type": "string",
+            "default": "rgba(0, 0, 0, 0.7)"
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 70
+        }
+    },
+    "textdomain": "devaqsa-blocks",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./editor.scss",
+    "style": "file:./style.scss",
+    "viewScript": "file:./view.js"
+}

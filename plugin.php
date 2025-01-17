@@ -42,3 +42,42 @@
  add_action('init', __NAMESPACE__ . '\Plugin::init', 20);
 //add_action('admin_init', __NAMESPACE__ . '\Admin::init');
 
+function enqueue_testimonial_carousel_assets() {
+    // Enqueue Slick Slider CSS
+    wp_enqueue_style(
+        'slick-carousel-css',
+        'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
+        array(),
+        '1.8.1'
+    );
+    
+    // Enqueue Slick Slider Theme CSS
+    wp_enqueue_style(
+        'slick-carousel-theme',
+        'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css',
+        array(),
+        '1.8.1'
+    );
+    
+    // Enqueue jQuery (WordPress should already have this)
+    wp_enqueue_script('jquery');
+    
+    // Enqueue Slick Slider JS
+    wp_enqueue_script(
+        'slick-carousel-js',
+        'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+        array('jquery'),
+        '1.8.1',
+        true
+    );
+    
+    // Enqueue your frontend JS
+    wp_enqueue_script(
+        'testimonial-carousel-frontend',
+        plugin_dir_url(__FILE__) . 'frontend.js',
+        array('jquery', 'slick-carousel-js'),
+        '1.0.0',
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_testimonial_carousel_assets');

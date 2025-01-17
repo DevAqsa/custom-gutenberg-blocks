@@ -41,7 +41,11 @@ class Plugin {
 		return [
 			'bootstrap',
 			'block-test',
-			'block-two'
+			'block-two',
+			'youtube-embed',
+			'image-gallery',
+			'testimonials-carousel',
+			'pricing-table'
 		];
 	}
 

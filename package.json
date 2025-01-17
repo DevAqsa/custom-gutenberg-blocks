@@ -5,7 +5,6 @@
 	"author": "Aqsa Mumtaz",
 	"license": "GPL-2.0-or-later",
 	"main": "build/blocks/index.js",
-	
 	"keywords": [
 		"wordpress",
 		"gutenberg",
@@ -38,6 +37,8 @@
 	"dependencies": {
 		"@wordpress/block-editor": "^11.4.0",
 		"@wordpress/components": "^23.4.0",
-		"@wordpress/i18n": "^4.27.0"
+		"@wordpress/i18n": "^4.27.0",
+		"lucide-react": "^0.472.0",
+		"slick-carousel": "^1.8.1"
 	}
 }

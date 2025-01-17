@@ -1,0 +1,43 @@
+{
+    "apiVersion": 2,
+    "name": "devaqsa-gutenberg-blocks/youtube-embed",
+    "version": "0.1.0",
+    "title": "YT Video Embed",
+    "category": "devaqsa-gutenberg-blocks",
+    "icon": "video-alt3",
+    "description": "Embed YouTube videos by pasting their URL.",
+    "supports": {
+        "html": false,
+        "anchor": true
+    },
+    "attributes": {
+        "videoUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "videoId": {
+            "type": "string",
+            "default": ""
+        },
+        "aspectRatio": {
+            "type": "string",
+            "default": "16:9"
+        },
+        "autoplay": {
+            "type": "boolean",
+            "default": false
+        },
+        "controls": {
+            "type": "boolean",
+            "default": true
+        },
+        "showRelated": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "textdomain": "devaqsa-gutenberg-blocks",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}
